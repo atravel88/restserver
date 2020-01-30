@@ -1,7 +1,6 @@
 package ru.atavrel.restserver.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -55,7 +54,9 @@ public class Role {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) { return true; }
+        if (this == obj) {
+            return true;
+        }
         if (obj instanceof Role) {
             Role role1 = (Role) obj;
             return role.equals(role1.role) &&

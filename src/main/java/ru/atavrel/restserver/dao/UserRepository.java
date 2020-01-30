@@ -7,7 +7,7 @@ import ru.atavrel.restserver.model.User;
 import java.util.List;
 import java.util.Optional;
 
-public interface UsersRepository extends CrudRepository<User, Long> {
+public interface UserRepository extends CrudRepository<User, Long> {
 
     @EntityGraph(attributePaths = {"roles"})
     Optional<User> findUserByEmail(String email);
